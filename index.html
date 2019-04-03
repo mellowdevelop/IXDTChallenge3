@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpaceX Launch Enviorement</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <!--CSS-->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+
+    <!--javascript-->
+    <script src="scripts/weather.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+  <header>
+
+    <!--Logo website-->
+    <a href="index.html" class="logo-link">
+      <img class="logo" src='images/spacex-vector-logo.svg' alt="Logo SpaceX" />
+    </a>
+    <!--End logo-->
+
+    <!--Navigation-->
+    <nav id="menu">
+         <ul>
+             <li><a href="#">FUEL STORAGE</a></li>
+             <li><a href="#">FOOD SUPPLY</a></li>
+             <li><a href="#">DISTANCE COVERED</a></li>
+         </ul>
+     </nav>
+     <!--End navigation-->
+
+    </header>
+<h1> Greetings traveller from Earth. This is the local time now</h1>
+    <!-- <div id="image"><img id="img" class="responsive background" src='images/space-view.png'></div> -->
+
+    <div id="weer" class="item1">
+
+    <article id="weather" class="weer"></article>
+      <form>
+      <fieldset>
+        <legend>Check weather of your hometown</legend>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" />
+        <input type="button" id="getWeather" value="get current weather" />
+      </fieldset>
+    </form>
+  		<script src="scripts/weather.js"></script>
+    </div>
+
+    <div id="location" class="item2"><h1>Windspeed</h1>
+
+      <article id="windspeed" class="weer"></article>
+      <p>Windsnelheid uit stad naar keuze zien. Bijvoorbeeld Los Angeles, California in USA.</p>
+      <form>
+      <fieldset>
+        <legend>Check weather of your hometown</legend>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="stad" />
+        <label for="state">State:</label>
+        <input type="text" name="state" id="state" />
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" />
+        <input type="button" id="getWind" value="get windspeed" />
+      </fieldset>
+    </form>
+      <script src="scripts/wind.js"></script>
+      <!-- Hieronder een script wat ik uit probeerde, werkte niet helemaal -->
+      <script src="scripts/windprobeer.js"></script>
+    </div>
+
+</body>
+</html>
