@@ -12,10 +12,7 @@
     <!--CSS-->
     <link type="text/css" href="css/style.css" rel="stylesheet" />
 
-    <!--javascript-->
-    <script src="scripts/weather.js" charset="utf-8"></script>
   </head>
-  <body>
 
   <header>
 
@@ -29,50 +26,46 @@
     <nav id="menu">
          <ul>
              <li><a href="#">FUEL STORAGE</a></li>
-             <li><a href="#">FOOD SUPPLY</a></li>
+             <li><a href="#">FOOD SUPPLY</a></li>®
              <li><a href="#">DISTANCE COVERED</a></li>
+             <li><a href="#">CLOCK</a></li>
          </ul>
      </nav>
      <!--End navigation-->
 
     </header>
-<h1> Greetings traveller from Earth.</h1>
-    <!-- <div id="image"><img id="img" class="responsive background" src='images/space-view.png'></div> -->
+      <div class="grid-container">
+        <h1 class="title"> Greetings traveller from Earth. This is the local time now</h1>
+        <div id="time" class="grid-item"></div>
+        <button id="cta" class="button">Call ship!</button>
+        <div id="rocket">
+          <img src="images/rocket-launch.svg" class="rocket" />
+        </div>
+        <div id="weather" class="grid-item">
+          <h1 class="title">Weather back on the ground</h1>
+      </div>
+        <div id="gif" class="grid-item">
+          <h1 class="title">Random gifs of the day</h1>
+          <div id="gifplace"></div>
+        </div>
+      <div id="image"><img id="img" class="responsive" src='images/space-view.png'></div>
 
-    <div id="weer" class="item1">
+      <script src="scripts/weather.js"></script>
+      <script src="scripts/gif.js"></script>
+      <script src="scripts/clock.js" charset="utf-8"></script>
+      <!-- Tweenmax script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" ></script>
 
-    <article id="weather" class="weer"></article>
-      <form>
-      <fieldset>
-        <legend>Check weather of your hometown</legend>
-        <label for="city">City:</label>
-        <input type="text" name="city" id="city" />
-        <input type="button" id="getWeather" value="get current weather" />
-      </fieldset>
-    </form>
-  		<script src="scripts/weather.js"></script>
-    </div>
+      <script>
 
-    <div id="location" class="item2"><h1>Windspeed</h1>
+          document.getElementById('cta').addEventListener('click', function() {
 
-      <article id="windspeed" class="weer"></article>
-      <p>Windsnelheid uit stad naar keuze zien. Bijvoorbeeld Los Angeles, California in USA.</p>
-      <form>
-      <fieldset>
-        <legend>Check weather of your hometown</legend>
-        <label for="city">City:</label>
-        <input type="text" name="city" id="stad" />
-        <label for="state">State:</label>
-        <input type="text" name="state" id="state" />
-        <label for="country">Country:</label>
-        <input type="text" name="country" id="country" />
-        <input type="button" id="getWind" value="get windspeed" />
-      </fieldset>
-    </form>
-      <script src="scripts/wind.js"></script>
-      <!-- Hieronder een script wat ik uit probeerde, werkte niet helemaal -->
-      <script src="scripts/windprobeer.js"></script>
-    </div>
 
+              TweenMax.to('.rocket', 1, {opacity: 1, y: 0, delay: 1, ease: Back.easeOut.config(1.7)});
+
+
+          })
+
+      </script>
 </body>
 </html>

@@ -25,9 +25,6 @@ h1{
 }
 body{
   background-color: #0d0f12;
-  background-image: url('space-view.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 p{
   color: white;
@@ -81,13 +78,17 @@ img.timephoto{
   margin-right: auto;
   width: 50%;
 }
+img.rocket{
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-200px);
+}
 section {
   width:100%;
   padding-top: 40px;
   padding-bottom: 40px;
-}
-img.background{
-
 }
 
 div.flex-row {
@@ -98,19 +99,6 @@ div.flex-row {
 }
 article.data-item{
   margin: 5px;
-}
-article.weer{
-  color: white;
-  font-size: 2em;
-  font-family: BrandonRegular;
-  text-align: center;
-}
-fieldset{
-  font-family: BrandonRegular;
-  font-size: x-large;
-  color: white;
-  border: #2b3038;
-  text-align: center;
 }
 .clock{
   font-family: BrandonRegular;
@@ -123,8 +111,53 @@ fieldset{
   border: 5px solid #005288;
   padding: 0px 5px 0px 5px;
 }
+.button{
+  font-family: BrandonRegular;
+  color: white;
+  padding: 20px;
+  margin: auto;
+  text-decoration: none;
+  background-color: #2b3038;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #2b3038;
+  transition: 300ms all;
+}
+#gif{
+  background: #2b3038;
+  font-family: BrandonRegular;
+  margin-top: 20px;
+}
 
 /* Media queries */
+@media only screen and (min-width: 0px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "time";
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  #time{
+    grid-area: time;
+    font-family: BrandonRegular;
+    font-size: 80px;
+    color: #005288;
+  }
+  .grid-item{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #weather{
+    background: #2b3038;
+    font-family: BrandonRegular;
+    color: white;
+  }
+}
 @media (max-width: 768px) {
   div.flex-row{
     display: flex;
